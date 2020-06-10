@@ -7,14 +7,26 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
+    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        HabitTaskScheduler().register()
+        return true
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { [unowned self] (granted, error) in
+            if granted {
+                UNUserNotificationCenter.current().delegate = self
+            } else {
+                dLog(error as Any)
+            }
+        }
         return true
     }
 
@@ -35,3 +47,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate : UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        // 
+    }
+}

@@ -13,6 +13,14 @@
 		5A9A7533248FCC5B00FDD8D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9A7532248FCC5B00FDD8D5 /* Assets.xcassets */; };
 		5A9A7536248FCC5B00FDD8D5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9A7535248FCC5B00FDD8D5 /* Preview Assets.xcassets */; };
 		5A9A7539248FCC5B00FDD8D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A9A7537248FCC5B00FDD8D5 /* LaunchScreen.storyboard */; };
+		5A9A7541248FD3EF00FDD8D5 /* dLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A7540248FD3EF00FDD8D5 /* dLog.swift */; };
+		5A9A7544248FD4E100FDD8D5 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A7543248FD4E100FDD8D5 /* Habit.swift */; };
+		5A9A7546248FD55A00FDD8D5 /* HabitPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A7545248FD55A00FDD8D5 /* HabitPersistence.swift */; };
+		5A9A7548248FD7EB00FDD8D5 /* HabitOrganizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A7547248FD7EB00FDD8D5 /* HabitOrganizer.swift */; };
+		5A9A754A248FDB5400FDD8D5 /* HabitNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A7549248FDB5400FDD8D5 /* HabitNotifier.swift */; };
+		5A9A754C248FE0C400FDD8D5 /* HabitTaskScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A754B248FE0C400FDD8D5 /* HabitTaskScheduler.swift */; };
+		5A9A754F248FE5E100FDD8D5 /* FollowList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A754E248FE5E100FDD8D5 /* FollowList.swift */; };
+		5A9A7551248FE7B900FDD8D5 /* FollowAddHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A7550248FE7B900FDD8D5 /* FollowAddHabit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		5A9A7535248FCC5B00FDD8D5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5A9A7538248FCC5B00FDD8D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A9A753A248FCC5B00FDD8D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A9A7540248FD3EF00FDD8D5 /* dLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dLog.swift; sourceTree = "<group>"; };
+		5A9A7543248FD4E100FDD8D5 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		5A9A7545248FD55A00FDD8D5 /* HabitPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitPersistence.swift; sourceTree = "<group>"; };
+		5A9A7547248FD7EB00FDD8D5 /* HabitOrganizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitOrganizer.swift; sourceTree = "<group>"; };
+		5A9A7549248FDB5400FDD8D5 /* HabitNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitNotifier.swift; sourceTree = "<group>"; };
+		5A9A754B248FE0C400FDD8D5 /* HabitTaskScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTaskScheduler.swift; sourceTree = "<group>"; };
+		5A9A754E248FE5E100FDD8D5 /* FollowList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowList.swift; sourceTree = "<group>"; };
+		5A9A7550248FE7B900FDD8D5 /* FollowAddHabit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowAddHabit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +72,11 @@
 		5A9A752B248FCC5900FDD8D5 /* Follow */ = {
 			isa = PBXGroup;
 			children = (
+				5A9A7542248FD4D900FDD8D5 /* Model */,
 				5A9A752C248FCC5900FDD8D5 /* AppDelegate.swift */,
+				5A9A7540248FD3EF00FDD8D5 /* dLog.swift */,
 				5A9A752E248FCC5900FDD8D5 /* SceneDelegate.swift */,
-				5A9A7530248FCC5900FDD8D5 /* ContentView.swift */,
+				5A9A754D248FE59E00FDD8D5 /* UI */,
 				5A9A7532248FCC5B00FDD8D5 /* Assets.xcassets */,
 				5A9A7537248FCC5B00FDD8D5 /* LaunchScreen.storyboard */,
 				5A9A753A248FCC5B00FDD8D5 /* Info.plist */,
@@ -73,6 +91,28 @@
 				5A9A7535248FCC5B00FDD8D5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5A9A7542248FD4D900FDD8D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5A9A7543248FD4E100FDD8D5 /* Habit.swift */,
+				5A9A7545248FD55A00FDD8D5 /* HabitPersistence.swift */,
+				5A9A7547248FD7EB00FDD8D5 /* HabitOrganizer.swift */,
+				5A9A7549248FDB5400FDD8D5 /* HabitNotifier.swift */,
+				5A9A754B248FE0C400FDD8D5 /* HabitTaskScheduler.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5A9A754D248FE59E00FDD8D5 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5A9A7530248FCC5900FDD8D5 /* ContentView.swift */,
+				5A9A754E248FE5E100FDD8D5 /* FollowList.swift */,
+				5A9A7550248FE7B900FDD8D5 /* FollowAddHabit.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +186,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A9A754C248FE0C400FDD8D5 /* HabitTaskScheduler.swift in Sources */,
+				5A9A7551248FE7B900FDD8D5 /* FollowAddHabit.swift in Sources */,
 				5A9A752D248FCC5900FDD8D5 /* AppDelegate.swift in Sources */,
+				5A9A7544248FD4E100FDD8D5 /* Habit.swift in Sources */,
+				5A9A7546248FD55A00FDD8D5 /* HabitPersistence.swift in Sources */,
 				5A9A752F248FCC5900FDD8D5 /* SceneDelegate.swift in Sources */,
+				5A9A7548248FD7EB00FDD8D5 /* HabitOrganizer.swift in Sources */,
+				5A9A754F248FE5E100FDD8D5 /* FollowList.swift in Sources */,
 				5A9A7531248FCC5900FDD8D5 /* ContentView.swift in Sources */,
+				5A9A754A248FDB5400FDD8D5 /* HabitNotifier.swift in Sources */,
+				5A9A7541248FD3EF00FDD8D5 /* dLog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +337,7 @@
 				DEVELOPMENT_TEAM = TN69P7NFS6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Follow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +358,7 @@
 				DEVELOPMENT_TEAM = TN69P7NFS6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Follow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
