@@ -21,6 +21,7 @@
 		5A9A754C248FE0C400FDD8D5 /* HabitTaskScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A754B248FE0C400FDD8D5 /* HabitTaskScheduler.swift */; };
 		5A9A754F248FE5E100FDD8D5 /* FollowList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A754E248FE5E100FDD8D5 /* FollowList.swift */; };
 		5A9A7551248FE7B900FDD8D5 /* FollowAddHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A7550248FE7B900FDD8D5 /* FollowAddHabit.swift */; };
+		5AA460A524932B5000029343 /* Firework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA460A424932B5000029343 /* Firework.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		5A9A754B248FE0C400FDD8D5 /* HabitTaskScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTaskScheduler.swift; sourceTree = "<group>"; };
 		5A9A754E248FE5E100FDD8D5 /* FollowList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowList.swift; sourceTree = "<group>"; };
 		5A9A7550248FE7B900FDD8D5 /* FollowAddHabit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowAddHabit.swift; sourceTree = "<group>"; };
+		5AA460A424932B5000029343 /* Firework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Firework.swift; path = ../../../../../Downloads/Feeling_Fireworks/Feeling_Fireworks/Firework.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				5A9A7530248FCC5900FDD8D5 /* ContentView.swift */,
+				5AA460A424932B5000029343 /* Firework.swift */,
 				5A9A754E248FE5E100FDD8D5 /* FollowList.swift */,
 				5A9A7550248FE7B900FDD8D5 /* FollowAddHabit.swift */,
 			);
@@ -188,6 +191,7 @@
 			files = (
 				5A9A754C248FE0C400FDD8D5 /* HabitTaskScheduler.swift in Sources */,
 				5A9A7551248FE7B900FDD8D5 /* FollowAddHabit.swift in Sources */,
+				5AA460A524932B5000029343 /* Firework.swift in Sources */,
 				5A9A752D248FCC5900FDD8D5 /* AppDelegate.swift in Sources */,
 				5A9A7544248FD4E100FDD8D5 /* Habit.swift in Sources */,
 				5A9A7546248FD55A00FDD8D5 /* HabitPersistence.swift in Sources */,
