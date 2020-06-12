@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A760F62249344D1000AC0BA /* FollowUpChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A760F61249344D1000AC0BA /* FollowUpChecker.swift */; };
+		5A760F6624935652000AC0BA /* Tracked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A760F6524935652000AC0BA /* Tracked.swift */; };
+		5A760F68249356BD000AC0BA /* Firework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A760F67249356BD000AC0BA /* Firework.swift */; };
+		5A760F6A24935811000AC0BA /* TrackingPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A760F6924935811000AC0BA /* TrackingPersistence.swift */; };
+		5A760F6C24936539000AC0BA /* TrackingOrganizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A760F6B24936539000AC0BA /* TrackingOrganizer.swift */; };
+		5A760F6F249377C9000AC0BA /* Sprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A760F6E249377C9000AC0BA /* Sprint.swift */; };
+		5A760F7124937957000AC0BA /* SprintPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A760F7024937957000AC0BA /* SprintPersistence.swift */; };
+		5A760F7324937A7B000AC0BA /* SprintOrganizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A760F7224937A7B000AC0BA /* SprintOrganizer.swift */; };
+		5A760F7524937ABD000AC0BA /* SprintNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A760F7424937ABD000AC0BA /* SprintNotifier.swift */; };
 		5A9A752D248FCC5900FDD8D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A752C248FCC5900FDD8D5 /* AppDelegate.swift */; };
 		5A9A752F248FCC5900FDD8D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A752E248FCC5900FDD8D5 /* SceneDelegate.swift */; };
 		5A9A7531248FCC5900FDD8D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A7530248FCC5900FDD8D5 /* ContentView.swift */; };
@@ -21,10 +30,18 @@
 		5A9A754C248FE0C400FDD8D5 /* HabitTaskScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A754B248FE0C400FDD8D5 /* HabitTaskScheduler.swift */; };
 		5A9A754F248FE5E100FDD8D5 /* FollowList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A754E248FE5E100FDD8D5 /* FollowList.swift */; };
 		5A9A7551248FE7B900FDD8D5 /* FollowAddHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A7550248FE7B900FDD8D5 /* FollowAddHabit.swift */; };
-		5AA460A524932B5000029343 /* Firework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA460A424932B5000029343 /* Firework.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A760F61249344D1000AC0BA /* FollowUpChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowUpChecker.swift; sourceTree = "<group>"; };
+		5A760F6524935652000AC0BA /* Tracked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracked.swift; sourceTree = "<group>"; };
+		5A760F67249356BD000AC0BA /* Firework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firework.swift; sourceTree = "<group>"; };
+		5A760F6924935811000AC0BA /* TrackingPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingPersistence.swift; sourceTree = "<group>"; };
+		5A760F6B24936539000AC0BA /* TrackingOrganizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingOrganizer.swift; sourceTree = "<group>"; };
+		5A760F6E249377C9000AC0BA /* Sprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sprint.swift; sourceTree = "<group>"; };
+		5A760F7024937957000AC0BA /* SprintPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintPersistence.swift; sourceTree = "<group>"; };
+		5A760F7224937A7B000AC0BA /* SprintOrganizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintOrganizer.swift; sourceTree = "<group>"; };
+		5A760F7424937ABD000AC0BA /* SprintNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintNotifier.swift; sourceTree = "<group>"; };
 		5A9A7529248FCC5900FDD8D5 /* Follow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Follow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9A752C248FCC5900FDD8D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A9A752E248FCC5900FDD8D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,7 +58,6 @@
 		5A9A754B248FE0C400FDD8D5 /* HabitTaskScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTaskScheduler.swift; sourceTree = "<group>"; };
 		5A9A754E248FE5E100FDD8D5 /* FollowList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowList.swift; sourceTree = "<group>"; };
 		5A9A7550248FE7B900FDD8D5 /* FollowAddHabit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowAddHabit.swift; sourceTree = "<group>"; };
-		5AA460A424932B5000029343 /* Firework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Firework.swift; path = ../../../../../Downloads/Feeling_Fireworks/Feeling_Fireworks/Firework.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +71,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A760F6324935620000AC0BA /* Habit */ = {
+			isa = PBXGroup;
+			children = (
+				5A9A7543248FD4E100FDD8D5 /* Habit.swift */,
+				5A9A7545248FD55A00FDD8D5 /* HabitPersistence.swift */,
+				5A9A7547248FD7EB00FDD8D5 /* HabitOrganizer.swift */,
+				5A9A7549248FDB5400FDD8D5 /* HabitNotifier.swift */,
+				5A9A754B248FE0C400FDD8D5 /* HabitTaskScheduler.swift */,
+			);
+			path = Habit;
+			sourceTree = "<group>";
+		};
+		5A760F6424935628000AC0BA /* Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				5A760F6524935652000AC0BA /* Tracked.swift */,
+				5A760F6B24936539000AC0BA /* TrackingOrganizer.swift */,
+				5A760F6924935811000AC0BA /* TrackingPersistence.swift */,
+			);
+			path = Tracking;
+			sourceTree = "<group>";
+		};
+		5A760F6D249377BD000AC0BA /* Sprint */ = {
+			isa = PBXGroup;
+			children = (
+				5A760F6E249377C9000AC0BA /* Sprint.swift */,
+				5A760F7024937957000AC0BA /* SprintPersistence.swift */,
+				5A760F7424937ABD000AC0BA /* SprintNotifier.swift */,
+				5A760F7224937A7B000AC0BA /* SprintOrganizer.swift */,
+			);
+			path = Sprint;
+			sourceTree = "<group>";
+		};
 		5A9A7520248FCC5900FDD8D5 = {
 			isa = PBXGroup;
 			children = (
@@ -98,11 +147,9 @@
 		5A9A7542248FD4D900FDD8D5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5A9A7543248FD4E100FDD8D5 /* Habit.swift */,
-				5A9A7545248FD55A00FDD8D5 /* HabitPersistence.swift */,
-				5A9A7547248FD7EB00FDD8D5 /* HabitOrganizer.swift */,
-				5A9A7549248FDB5400FDD8D5 /* HabitNotifier.swift */,
-				5A9A754B248FE0C400FDD8D5 /* HabitTaskScheduler.swift */,
+				5A760F6D249377BD000AC0BA /* Sprint */,
+				5A760F6424935628000AC0BA /* Tracking */,
+				5A760F6324935620000AC0BA /* Habit */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -111,9 +158,10 @@
 			isa = PBXGroup;
 			children = (
 				5A9A7530248FCC5900FDD8D5 /* ContentView.swift */,
-				5AA460A424932B5000029343 /* Firework.swift */,
+				5A760F67249356BD000AC0BA /* Firework.swift */,
 				5A9A754E248FE5E100FDD8D5 /* FollowList.swift */,
 				5A9A7550248FE7B900FDD8D5 /* FollowAddHabit.swift */,
+				5A760F61249344D1000AC0BA /* FollowUpChecker.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -189,17 +237,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A760F62249344D1000AC0BA /* FollowUpChecker.swift in Sources */,
+				5A760F68249356BD000AC0BA /* Firework.swift in Sources */,
 				5A9A754C248FE0C400FDD8D5 /* HabitTaskScheduler.swift in Sources */,
 				5A9A7551248FE7B900FDD8D5 /* FollowAddHabit.swift in Sources */,
-				5AA460A524932B5000029343 /* Firework.swift in Sources */,
 				5A9A752D248FCC5900FDD8D5 /* AppDelegate.swift in Sources */,
+				5A760F7124937957000AC0BA /* SprintPersistence.swift in Sources */,
 				5A9A7544248FD4E100FDD8D5 /* Habit.swift in Sources */,
+				5A760F7524937ABD000AC0BA /* SprintNotifier.swift in Sources */,
+				5A760F6C24936539000AC0BA /* TrackingOrganizer.swift in Sources */,
+				5A760F6624935652000AC0BA /* Tracked.swift in Sources */,
 				5A9A7546248FD55A00FDD8D5 /* HabitPersistence.swift in Sources */,
 				5A9A752F248FCC5900FDD8D5 /* SceneDelegate.swift in Sources */,
 				5A9A7548248FD7EB00FDD8D5 /* HabitOrganizer.swift in Sources */,
 				5A9A754F248FE5E100FDD8D5 /* FollowList.swift in Sources */,
+				5A760F6F249377C9000AC0BA /* Sprint.swift in Sources */,
 				5A9A7531248FCC5900FDD8D5 /* ContentView.swift in Sources */,
 				5A9A754A248FDB5400FDD8D5 /* HabitNotifier.swift in Sources */,
+				5A760F6A24935811000AC0BA /* TrackingPersistence.swift in Sources */,
+				5A760F7324937A7B000AC0BA /* SprintOrganizer.swift in Sources */,
 				5A9A7541248FD3EF00FDD8D5 /* dLog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

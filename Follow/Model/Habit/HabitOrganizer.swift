@@ -16,6 +16,8 @@ class HabitOrganizer: ObservableObject {
     private var persister: HabitPersister
     private var notifier: HabitNotifier = HabitNotifier()
     
+    
+    
     func newHabit(_ habit: Habit) {
         self.habits.append(habit)
         notifier.addNotification(for: habit)

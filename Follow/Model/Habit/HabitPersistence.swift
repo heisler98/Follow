@@ -27,7 +27,7 @@ class HabitPersister {
         }
         return true
     }
-    
+    ///Retrieves an array of kind `Habit` from the default save directory.
     func retrieve() throws -> [Habit] {
         guard FileManager.default.fileExists(atPath: Paths.saveDirectory.path) else {
             dLog("No file at path")
