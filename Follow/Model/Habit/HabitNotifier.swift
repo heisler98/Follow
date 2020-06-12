@@ -14,7 +14,7 @@ class HabitNotifier {
     
     func addNotification(for habit: Habit) {
         let content = UNMutableNotificationContent()
-        content.title = "\(habit.name): Follow"
+        content.title = "\(habit.name)"
         
         var timeComponents = Calendar.current.dateComponents([.day], from: Date(timeIntervalSinceNow: 60*60*24))
         timeComponents.hour = Int.random(in: 12...23)
@@ -26,7 +26,6 @@ class HabitNotifier {
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         HabitNotifier.center.add(request) { (error) in
             if error != nil { dLog(error!) }
-            
         }
     }
 }

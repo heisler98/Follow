@@ -15,6 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
 //        HabitTaskScheduler().register()
+        
+        let notifier = AppNotifier()
+        if !notifier.setupComplete {
+            notifier.setMorningNotifications()
+            notifier.setNightNotifications()
+        }
+        
         return true
     }
 

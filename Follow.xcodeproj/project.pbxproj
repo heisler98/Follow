@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A75BBA8249405EA00F2C260 /* AppNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A75BBA7249405EA00F2C260 /* AppNotifier.swift */; };
 		5A760F62249344D1000AC0BA /* FollowUpChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A760F61249344D1000AC0BA /* FollowUpChecker.swift */; };
 		5A760F6624935652000AC0BA /* Tracked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A760F6524935652000AC0BA /* Tracked.swift */; };
 		5A760F68249356BD000AC0BA /* Firework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A760F67249356BD000AC0BA /* Firework.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A75BBA7249405EA00F2C260 /* AppNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNotifier.swift; sourceTree = "<group>"; };
 		5A760F61249344D1000AC0BA /* FollowUpChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowUpChecker.swift; sourceTree = "<group>"; };
 		5A760F6524935652000AC0BA /* Tracked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracked.swift; sourceTree = "<group>"; };
 		5A760F67249356BD000AC0BA /* Firework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firework.swift; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A75BBA6249405D300F2C260 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				5A75BBA7249405EA00F2C260 /* AppNotifier.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
 		5A760F6324935620000AC0BA /* Habit */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +157,7 @@
 		5A9A7542248FD4D900FDD8D5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5A75BBA6249405D300F2C260 /* Notifications */,
 				5A760F6D249377BD000AC0BA /* Sprint */,
 				5A760F6424935628000AC0BA /* Tracking */,
 				5A760F6324935620000AC0BA /* Habit */,
@@ -247,6 +258,7 @@
 				5A760F7524937ABD000AC0BA /* SprintNotifier.swift in Sources */,
 				5A760F6C24936539000AC0BA /* TrackingOrganizer.swift in Sources */,
 				5A760F6624935652000AC0BA /* Tracked.swift in Sources */,
+				5A75BBA8249405EA00F2C260 /* AppNotifier.swift in Sources */,
 				5A9A7546248FD55A00FDD8D5 /* HabitPersistence.swift in Sources */,
 				5A9A752F248FCC5900FDD8D5 /* SceneDelegate.swift in Sources */,
 				5A9A7548248FD7EB00FDD8D5 /* HabitOrganizer.swift in Sources */,
