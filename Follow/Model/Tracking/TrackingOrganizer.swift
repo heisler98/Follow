@@ -18,6 +18,20 @@ class TrackingOrganizer : ObservableObject {
         
     }
     
+    func streakForHabit(_ habit: Habit) -> Int {
+        let specificTracks = self.tracked.filter { return $0.evaluation.keys.contains(habit) }
+        var streakCount = 0
+        let enumeration = specificTracks.enumerated()
+        for (index, track) in enumeration {
+            guard (index) <= (specificTracks.count-1) else { return streakCount }
+            if track.date.timeIntervalSince(specificTracks[index+1].date) > (60*60*24) {
+                streakCount += 1
+            }
+        }
+        
+        return streakCount
+    }
+    
     private func saveChanges() {
         DispatchQueue.global(qos: .userInitiated).sync {
             _ = persister.persist(self.tracked)

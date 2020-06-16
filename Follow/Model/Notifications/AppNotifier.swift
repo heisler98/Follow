@@ -33,7 +33,7 @@ class AppNotifier {
         
         let content = UNMutableNotificationContent()
         content.title = "Good morning"
-        var timeComponents = Calendar.current.dateComponents([.day], from: Date(timeIntervalSinceNow: 60*60*24))
+        var timeComponents = DateComponents()
         timeComponents.hour = 12
         timeComponents.minute = 0
         
@@ -51,7 +51,7 @@ class AppNotifier {
         
         let content = UNMutableNotificationContent()
         content.title = "Follow tomorrow"
-        var timeComponents = Calendar.current.dateComponents([.day], from: Date(timeIntervalSinceNow: 60*60*24))
+        var timeComponents = DateComponents()
         timeComponents.hour = 22
         timeComponents.minute = 30
         

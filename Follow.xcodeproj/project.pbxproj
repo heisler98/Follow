@@ -17,6 +17,10 @@
 		5A760F7124937957000AC0BA /* SprintPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A760F7024937957000AC0BA /* SprintPersistence.swift */; };
 		5A760F7324937A7B000AC0BA /* SprintOrganizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A760F7224937A7B000AC0BA /* SprintOrganizer.swift */; };
 		5A760F7524937ABD000AC0BA /* SprintNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A760F7424937ABD000AC0BA /* SprintNotifier.swift */; };
+		5A81C4AD249869C200303B7C /* SprintTaskScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A81C4AC249869C200303B7C /* SprintTaskScheduler.swift */; };
+		5A81C4B024986D1000303B7C /* SprintTracked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A81C4AF24986D1000303B7C /* SprintTracked.swift */; };
+		5A81C4B224986D4900303B7C /* SprintTrackingOrganizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A81C4B124986D4900303B7C /* SprintTrackingOrganizer.swift */; };
+		5A81C4B424986DD500303B7C /* SprintTrackingPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A81C4B324986DD500303B7C /* SprintTrackingPersistence.swift */; };
 		5A9A752D248FCC5900FDD8D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A752C248FCC5900FDD8D5 /* AppDelegate.swift */; };
 		5A9A752F248FCC5900FDD8D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A752E248FCC5900FDD8D5 /* SceneDelegate.swift */; };
 		5A9A7531248FCC5900FDD8D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A7530248FCC5900FDD8D5 /* ContentView.swift */; };
@@ -31,6 +35,9 @@
 		5A9A754C248FE0C400FDD8D5 /* HabitTaskScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A754B248FE0C400FDD8D5 /* HabitTaskScheduler.swift */; };
 		5A9A754F248FE5E100FDD8D5 /* FollowList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A754E248FE5E100FDD8D5 /* FollowList.swift */; };
 		5A9A7551248FE7B900FDD8D5 /* FollowAddHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A7550248FE7B900FDD8D5 /* FollowAddHabit.swift */; };
+		5AB548422495652700F230EF /* Double+Convert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB548412495652700F230EF /* Double+Convert.swift */; };
+		5AB548442495654B00F230EF /* CustomSliderViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB548432495654B00F230EF /* CustomSliderViewModifier.swift */; };
+		5AB548462495656D00F230EF /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB548452495656D00F230EF /* CustomSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +51,10 @@
 		5A760F7024937957000AC0BA /* SprintPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintPersistence.swift; sourceTree = "<group>"; };
 		5A760F7224937A7B000AC0BA /* SprintOrganizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintOrganizer.swift; sourceTree = "<group>"; };
 		5A760F7424937ABD000AC0BA /* SprintNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintNotifier.swift; sourceTree = "<group>"; };
+		5A81C4AC249869C200303B7C /* SprintTaskScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintTaskScheduler.swift; sourceTree = "<group>"; };
+		5A81C4AF24986D1000303B7C /* SprintTracked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintTracked.swift; sourceTree = "<group>"; };
+		5A81C4B124986D4900303B7C /* SprintTrackingOrganizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintTrackingOrganizer.swift; sourceTree = "<group>"; };
+		5A81C4B324986DD500303B7C /* SprintTrackingPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintTrackingPersistence.swift; sourceTree = "<group>"; };
 		5A9A7529248FCC5900FDD8D5 /* Follow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Follow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9A752C248FCC5900FDD8D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A9A752E248FCC5900FDD8D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +71,9 @@
 		5A9A754B248FE0C400FDD8D5 /* HabitTaskScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTaskScheduler.swift; sourceTree = "<group>"; };
 		5A9A754E248FE5E100FDD8D5 /* FollowList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowList.swift; sourceTree = "<group>"; };
 		5A9A7550248FE7B900FDD8D5 /* FollowAddHabit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowAddHabit.swift; sourceTree = "<group>"; };
+		5AB548412495652700F230EF /* Double+Convert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Convert.swift"; sourceTree = "<group>"; };
+		5AB548432495654B00F230EF /* CustomSliderViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSliderViewModifier.swift; sourceTree = "<group>"; };
+		5AB548452495656D00F230EF /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +113,7 @@
 				5A760F6524935652000AC0BA /* Tracked.swift */,
 				5A760F6B24936539000AC0BA /* TrackingOrganizer.swift */,
 				5A760F6924935811000AC0BA /* TrackingPersistence.swift */,
+				5A81C4AE24986D0500303B7C /* Sprint Tracking */,
 			);
 			path = Tracking;
 			sourceTree = "<group>";
@@ -110,8 +125,19 @@
 				5A760F7024937957000AC0BA /* SprintPersistence.swift */,
 				5A760F7424937ABD000AC0BA /* SprintNotifier.swift */,
 				5A760F7224937A7B000AC0BA /* SprintOrganizer.swift */,
+				5A81C4AC249869C200303B7C /* SprintTaskScheduler.swift */,
 			);
 			path = Sprint;
+			sourceTree = "<group>";
+		};
+		5A81C4AE24986D0500303B7C /* Sprint Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				5A81C4AF24986D1000303B7C /* SprintTracked.swift */,
+				5A81C4B124986D4900303B7C /* SprintTrackingOrganizer.swift */,
+				5A81C4B324986DD500303B7C /* SprintTrackingPersistence.swift */,
+			);
+			path = "Sprint Tracking";
 			sourceTree = "<group>";
 		};
 		5A9A7520248FCC5900FDD8D5 = {
@@ -136,6 +162,7 @@
 				5A9A7542248FD4D900FDD8D5 /* Model */,
 				5A9A752C248FCC5900FDD8D5 /* AppDelegate.swift */,
 				5A9A7540248FD3EF00FDD8D5 /* dLog.swift */,
+				5AB548412495652700F230EF /* Double+Convert.swift */,
 				5A9A752E248FCC5900FDD8D5 /* SceneDelegate.swift */,
 				5A9A754D248FE59E00FDD8D5 /* UI */,
 				5A9A7532248FCC5B00FDD8D5 /* Assets.xcassets */,
@@ -168,6 +195,8 @@
 		5A9A754D248FE59E00FDD8D5 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				5AB548432495654B00F230EF /* CustomSliderViewModifier.swift */,
+				5AB548452495656D00F230EF /* CustomSlider.swift */,
 				5A9A7530248FCC5900FDD8D5 /* ContentView.swift */,
 				5A760F67249356BD000AC0BA /* Firework.swift */,
 				5A9A754E248FE5E100FDD8D5 /* FollowList.swift */,
@@ -248,16 +277,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A81C4B024986D1000303B7C /* SprintTracked.swift in Sources */,
 				5A760F62249344D1000AC0BA /* FollowUpChecker.swift in Sources */,
 				5A760F68249356BD000AC0BA /* Firework.swift in Sources */,
 				5A9A754C248FE0C400FDD8D5 /* HabitTaskScheduler.swift in Sources */,
 				5A9A7551248FE7B900FDD8D5 /* FollowAddHabit.swift in Sources */,
+				5AB548422495652700F230EF /* Double+Convert.swift in Sources */,
 				5A9A752D248FCC5900FDD8D5 /* AppDelegate.swift in Sources */,
 				5A760F7124937957000AC0BA /* SprintPersistence.swift in Sources */,
 				5A9A7544248FD4E100FDD8D5 /* Habit.swift in Sources */,
 				5A760F7524937ABD000AC0BA /* SprintNotifier.swift in Sources */,
 				5A760F6C24936539000AC0BA /* TrackingOrganizer.swift in Sources */,
 				5A760F6624935652000AC0BA /* Tracked.swift in Sources */,
+				5A81C4AD249869C200303B7C /* SprintTaskScheduler.swift in Sources */,
+				5A81C4B224986D4900303B7C /* SprintTrackingOrganizer.swift in Sources */,
+				5AB548442495654B00F230EF /* CustomSliderViewModifier.swift in Sources */,
 				5A75BBA8249405EA00F2C260 /* AppNotifier.swift in Sources */,
 				5A9A7546248FD55A00FDD8D5 /* HabitPersistence.swift in Sources */,
 				5A9A752F248FCC5900FDD8D5 /* SceneDelegate.swift in Sources */,
@@ -265,6 +299,8 @@
 				5A9A754F248FE5E100FDD8D5 /* FollowList.swift in Sources */,
 				5A760F6F249377C9000AC0BA /* Sprint.swift in Sources */,
 				5A9A7531248FCC5900FDD8D5 /* ContentView.swift in Sources */,
+				5A81C4B424986DD500303B7C /* SprintTrackingPersistence.swift in Sources */,
+				5AB548462495656D00F230EF /* CustomSlider.swift in Sources */,
 				5A9A754A248FDB5400FDD8D5 /* HabitNotifier.swift in Sources */,
 				5A760F6A24935811000AC0BA /* TrackingPersistence.swift in Sources */,
 				5A760F7324937A7B000AC0BA /* SprintOrganizer.swift in Sources */,

@@ -20,6 +20,7 @@ struct FollowList: View {
     @State private var isNewAdditionSprint: Bool = false
     @State private var newSprint: Sprint?
     var scheduler = HabitTaskScheduler()
+    var trackOrganizer = TrackingOrganizer()
     var body: some View {
         ZStack {
             
@@ -71,19 +72,19 @@ struct FollowList: View {
                 }.pickerStyle(SegmentedPickerStyle())
                     .padding(.horizontal)
                     .sheet(isPresented: $isPresentingFollowUp, onDismiss: {
-                        self.scheduler.manuallySchedule { (success) in
-                            guard success == true else { return }
-                            UserDefaults.standard.set(Date(), forKey: kFollowLastSetNotifyDate)
-                        }
+//                        self.scheduler.manuallySchedule { (success) in
+//                            guard success == true else { return }
+//                            UserDefaults.standard.set(Date(), forKey: kFollowLastSetNotifyDate)
+//                        }
                         self.didFollowTomorrow.toggle()
                     }) {
-                        FollowUpChecker(isPresented: self.$isPresentingFollowUp, habits: self.organizer.habits)
+                        FollowUpChecker(isPresented: self.$isPresentingFollowUp, habits: self.organizer.habits, sprints: self.sprintOrganizer.sprints)
                 }
                 if listSelection == 0 {
                     List {
                         ForEach(organizer.habits, id: \.self) { habit in
                             Text(habit.name)
-                                .bold()
+                            .bold()
                         }
                     }
                 }
@@ -119,6 +120,24 @@ struct FollowList: View {
                     }
                 }
             }
+        }
+    }
+    
+    func cellFor(_ habit: Habit) -> some View {
+        let streak = trackOrganizer.streakForHabit(habit)
+        if streak > 0 {
+            return AnyView(VStack(spacing: 0) {
+                Text(habit.name)
+                    .bold()
+                    .padding(.bottom, 7)
+                Text("🔥 \(streak)")
+                    .font(.caption)
+            })
+        } else {
+            return AnyView(VStack(spacing: 0) {
+                Text(habit.name)
+                    .bold()
+            })
         }
     }
 }
