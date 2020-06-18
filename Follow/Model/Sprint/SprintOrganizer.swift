@@ -19,6 +19,11 @@ class SprintOrganizer: ObservableObject {
         saveChanges()
     }
     
+    func removeSprints(at offsets: IndexSet) {
+        self.sprints.remove(atOffsets: offsets)
+        saveChanges()
+    }
+    
     private func saveChanges() {
         DispatchQueue.global(qos: .userInitiated).sync {
             _ = persister.persist(self.sprints)

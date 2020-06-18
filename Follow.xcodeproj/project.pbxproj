@@ -21,6 +21,9 @@
 		5A81C4B024986D1000303B7C /* SprintTracked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A81C4AF24986D1000303B7C /* SprintTracked.swift */; };
 		5A81C4B224986D4900303B7C /* SprintTrackingOrganizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A81C4B124986D4900303B7C /* SprintTrackingOrganizer.swift */; };
 		5A81C4B424986DD500303B7C /* SprintTrackingPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A81C4B324986DD500303B7C /* SprintTrackingPersistence.swift */; };
+		5A81C4D2249B0CEC00303B7C /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A81C4D1249B0CEC00303B7C /* ToDo.swift */; };
+		5A81C4D4249B0D5700303B7C /* ToDoPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A81C4D3249B0D5700303B7C /* ToDoPersistence.swift */; };
+		5A81C4D6249B0E3800303B7C /* ToDoOrganizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A81C4D5249B0E3800303B7C /* ToDoOrganizer.swift */; };
 		5A9A752D248FCC5900FDD8D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A752C248FCC5900FDD8D5 /* AppDelegate.swift */; };
 		5A9A752F248FCC5900FDD8D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A752E248FCC5900FDD8D5 /* SceneDelegate.swift */; };
 		5A9A7531248FCC5900FDD8D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9A7530248FCC5900FDD8D5 /* ContentView.swift */; };
@@ -55,6 +58,9 @@
 		5A81C4AF24986D1000303B7C /* SprintTracked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintTracked.swift; sourceTree = "<group>"; };
 		5A81C4B124986D4900303B7C /* SprintTrackingOrganizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintTrackingOrganizer.swift; sourceTree = "<group>"; };
 		5A81C4B324986DD500303B7C /* SprintTrackingPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintTrackingPersistence.swift; sourceTree = "<group>"; };
+		5A81C4D1249B0CEC00303B7C /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
+		5A81C4D3249B0D5700303B7C /* ToDoPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoPersistence.swift; sourceTree = "<group>"; };
+		5A81C4D5249B0E3800303B7C /* ToDoOrganizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoOrganizer.swift; sourceTree = "<group>"; };
 		5A9A7529248FCC5900FDD8D5 /* Follow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Follow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9A752C248FCC5900FDD8D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A9A752E248FCC5900FDD8D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +146,16 @@
 			path = "Sprint Tracking";
 			sourceTree = "<group>";
 		};
+		5A81C4D0249B0CCA00303B7C /* ToDo */ = {
+			isa = PBXGroup;
+			children = (
+				5A81C4D1249B0CEC00303B7C /* ToDo.swift */,
+				5A81C4D3249B0D5700303B7C /* ToDoPersistence.swift */,
+				5A81C4D5249B0E3800303B7C /* ToDoOrganizer.swift */,
+			);
+			path = ToDo;
+			sourceTree = "<group>";
+		};
 		5A9A7520248FCC5900FDD8D5 = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +200,7 @@
 		5A9A7542248FD4D900FDD8D5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5A81C4D0249B0CCA00303B7C /* ToDo */,
 				5A75BBA6249405D300F2C260 /* Notifications */,
 				5A760F6D249377BD000AC0BA /* Sprint */,
 				5A760F6424935628000AC0BA /* Tracking */,
@@ -287,6 +304,7 @@
 				5A760F7124937957000AC0BA /* SprintPersistence.swift in Sources */,
 				5A9A7544248FD4E100FDD8D5 /* Habit.swift in Sources */,
 				5A760F7524937ABD000AC0BA /* SprintNotifier.swift in Sources */,
+				5A81C4D2249B0CEC00303B7C /* ToDo.swift in Sources */,
 				5A760F6C24936539000AC0BA /* TrackingOrganizer.swift in Sources */,
 				5A760F6624935652000AC0BA /* Tracked.swift in Sources */,
 				5A81C4AD249869C200303B7C /* SprintTaskScheduler.swift in Sources */,
@@ -298,7 +316,9 @@
 				5A9A7548248FD7EB00FDD8D5 /* HabitOrganizer.swift in Sources */,
 				5A9A754F248FE5E100FDD8D5 /* FollowList.swift in Sources */,
 				5A760F6F249377C9000AC0BA /* Sprint.swift in Sources */,
+				5A81C4D6249B0E3800303B7C /* ToDoOrganizer.swift in Sources */,
 				5A9A7531248FCC5900FDD8D5 /* ContentView.swift in Sources */,
+				5A81C4D4249B0D5700303B7C /* ToDoPersistence.swift in Sources */,
 				5A81C4B424986DD500303B7C /* SprintTrackingPersistence.swift in Sources */,
 				5AB548462495656D00F230EF /* CustomSlider.swift in Sources */,
 				5A9A754A248FDB5400FDD8D5 /* HabitNotifier.swift in Sources */,

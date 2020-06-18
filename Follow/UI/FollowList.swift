@@ -11,16 +11,19 @@ import SwiftUI
 struct FollowList: View {
     @ObservedObject var organizer: HabitOrganizer = HabitOrganizer()
     @ObservedObject var sprintOrganizer: SprintOrganizer = SprintOrganizer()
+    @ObservedObject var todoOrganizer: ToDoOrganizer = ToDoOrganizer()
     @State private var newHabitText: String = ""
     @State private var isAddingHabit: Bool = false
     @State private var isPresentingFollowUp: Bool = false
     @State private var didFollowTomorrow = false
-    ///0 = Habit, 1 = Sprint
+    ///0 = ToDo, 1 = Sprint, 2 = Habit
     @State private var listSelection: Int = 0
     @State private var isNewAdditionSprint: Bool = false
     @State private var newSprint: Sprint?
+    @State private var newToDo: ToDo?
     var scheduler = HabitTaskScheduler()
     var trackOrganizer = TrackingOrganizer()
+    @State private var feedbackGenerator: UISelectionFeedbackGenerator! = UISelectionFeedbackGenerator()
     var body: some View {
         ZStack {
             
@@ -46,12 +49,17 @@ struct FollowList: View {
                         self.newHabitText = ""
                         return
                     }
+                    if self.newToDo != nil {
+                        self.todoOrganizer.newToDo(self.newToDo!)
+                        self.newHabitText = ""
+                    }
                     if self.newHabitText != "" {
                         self.organizer.newHabit(Habit(name: self.newHabitText))
                         self.newHabitText = ""
                     }
+                    
                 }) {
-                    FollowAddHabit(isSprint: self.$isNewAdditionSprint, sprint: self.$newSprint, text: self.$newHabitText, isPresented: self.$isAddingHabit)
+                    FollowAddHabit(isSprint: self.$isNewAdditionSprint, sprint: self.$newSprint, todo: self.$newToDo, text: self.$newHabitText, isPresented: self.$isAddingHabit)
                 }
                 if organizer.lastSaveSucceeded == false {
                     HStack {
@@ -67,9 +75,11 @@ struct FollowList: View {
                     }
                 }
                 Picker(selection: $listSelection, label: Text("")) {
-                    Text("Habits").tag(0)
+                    Text("To-do").tag(0)
                     Text("Sprints").tag(1)
+                    Text("Habits").tag(2)
                 }.pickerStyle(SegmentedPickerStyle())
+                
                     .padding(.horizontal)
                     .sheet(isPresented: $isPresentingFollowUp, onDismiss: {
 //                        self.scheduler.manuallySchedule { (success) in
@@ -82,10 +92,18 @@ struct FollowList: View {
                 }
                 if listSelection == 0 {
                     List {
+                        ForEach(todoOrganizer.todos, id: \.self) { todo in
+                            Text(todo.name)
+                            .bold()
+                        }.onDelete(perform: self.removeToDos(at:))
+                    }
+                }
+                if listSelection == 2 {
+                    List {
                         ForEach(organizer.habits, id: \.self) { habit in
                             Text(habit.name)
                             .bold()
-                        }
+                        }.onDelete(perform: self.organizer.removeHabits)
                     }
                 }
                 if listSelection == 1 {
@@ -99,7 +117,7 @@ struct FollowList: View {
                                     .font(.callout)
                                     .foregroundColor(.gray)
                             }
-                        }
+                        }.onDelete(perform: self.sprintOrganizer.removeSprints)
                     }
                 }
                 if scheduler.isManuallyScheduled == false {
@@ -119,8 +137,29 @@ struct FollowList: View {
                         Spacer()
                     }
                 }
-            }
+            }.onTapGesture(count: 2) {
+                switch self.listSelection {
+                case 0:
+                    self.listSelection = 1
+                    break
+                case 1:
+                    self.listSelection = 2
+                    break
+                case 2:
+                    self.listSelection = 0
+                default:()
+                }
+            }        }.onReceive([self.listSelection].publisher.first()) { _ in
+            self.feedbackGenerator.selectionChanged()
+        }.onAppear {
+            self.feedbackGenerator.prepare()
+        }.onDisappear {
+            self.feedbackGenerator = nil
         }
+    }
+    
+    func removeToDos(at offsets: IndexSet) {
+        self.todoOrganizer.removeTodos(at: offsets)
     }
     
     func cellFor(_ habit: Habit) -> some View {

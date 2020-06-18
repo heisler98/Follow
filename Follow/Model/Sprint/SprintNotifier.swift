@@ -16,7 +16,12 @@ class SprintNotifier {
         let content = UNMutableNotificationContent()
         content.title = sprint.name
         
-        var timeComponents = Calendar.current.dateComponents([.day], from: Date(timeIntervalSinceNow: 60*60*24))
+        var timeComponents = Calendar.current.dateComponents([.day, .hour], from: Date(timeIntervalSinceNow: 60*60*24))
+        if timeComponents.hour! < 12 {
+            // if the hour is between midnight and noon,
+            // set the reminders for today
+            timeComponents.day = nil
+        }
         timeComponents.hour = Int.random(in: 12...23)
         timeComponents.minute = Int.random(in: 0...59)
         

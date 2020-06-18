@@ -16,6 +16,10 @@ class HabitTaskScheduler {
     
     var isManuallyScheduled: Bool {
         guard let lastScheduledDate = UserDefaults.standard.value(forKey: kFollowLastSetNotifyDate) as? Date else { return false }
+        let timeComponents = Calendar.current.dateComponents([.hour], from: lastScheduledDate)
+        if timeComponents.hour! < 12 && Calendar.current.isDate(lastScheduledDate, inSameDayAs: Date()) {
+            return false
+        }
         return Calendar.current.isDate(lastScheduledDate, inSameDayAs: Date())
     }
     

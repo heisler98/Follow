@@ -15,7 +15,7 @@ struct CustomSlider<Component: View>: View {
     var knobWidth: CGFloat?
     let viewBuilder: (CustomSliderComponents) -> Component
     
-    var feedbackGenerator = UISelectionFeedbackGenerator()
+    @State var feedbackGenerator : UISelectionFeedbackGenerator! = UISelectionFeedbackGenerator()
     
     init(value: Binding<Double>, range: (Double, Double), knobWidth: CGFloat? = nil,
          _ viewBuilder: @escaping (CustomSliderComponents) -> Component
@@ -31,6 +31,8 @@ struct CustomSlider<Component: View>: View {
             self.view(geometry: geometry) // function below
                 .onAppear {
                     self.feedbackGenerator.prepare()
+            }.onDisappear {
+                self.feedbackGenerator = nil
             }
         }
     }

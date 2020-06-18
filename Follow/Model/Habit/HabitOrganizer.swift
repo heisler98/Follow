@@ -29,6 +29,11 @@ class HabitOrganizer: ObservableObject {
         saveChanges()
     }
     
+    func removeHabits(at offsets: IndexSet) {
+        self.habits.remove(atOffsets: offsets)
+        saveChanges()
+    }
+    
     private func saveChanges() {
         var success = false
         DispatchQueue.global(qos: .background).sync {

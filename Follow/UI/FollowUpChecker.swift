@@ -18,7 +18,7 @@ struct FollowUpChecker: View {
 //    @State private var floatingValues: [Double] = [0, 0, 0, 0, 0]
     var organizer = TrackingOrganizer()
     var sprintOrganizer = SprintTrackingOrganizer()
-    var feedbackGenerator = UISelectionFeedbackGenerator()
+//    var feedbackGenerator = UISelectionFeedbackGenerator()
     
     var body: some View {
         
@@ -83,7 +83,7 @@ struct FollowUpChecker: View {
                 Spacer()
             }
         }.onAppear {
-            self.feedbackGenerator.prepare()
+//            self.feedbackGenerator.prepare()
         }
     }
     
