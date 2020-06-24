@@ -17,6 +17,17 @@
 		5A760F7124937957000AC0BA /* SprintPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A760F7024937957000AC0BA /* SprintPersistence.swift */; };
 		5A760F7324937A7B000AC0BA /* SprintOrganizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A760F7224937A7B000AC0BA /* SprintOrganizer.swift */; };
 		5A760F7524937ABD000AC0BA /* SprintNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A760F7424937ABD000AC0BA /* SprintNotifier.swift */; };
+		5A77BFE824A317A000F4DB80 /* Synchronicity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A77BFE724A317A000F4DB80 /* Synchronicity.swift */; };
+		5A77BFEA24A3181600F4DB80 /* SynchronicityPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A77BFE924A3181600F4DB80 /* SynchronicityPersistence.swift */; };
+		5A77BFEC24A3190500F4DB80 /* SynchronicityNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A77BFEB24A3190500F4DB80 /* SynchronicityNotifier.swift */; };
+		5A77BFEE24A319CE00F4DB80 /* SynchronicityOrganizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A77BFED24A319CE00F4DB80 /* SynchronicityOrganizer.swift */; };
+		5A77BFF024A31B2F00F4DB80 /* SynchronicityTaskScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A77BFEF24A31B2F00F4DB80 /* SynchronicityTaskScheduler.swift */; };
+		5A77BFF424A320E900F4DB80 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A77BFF324A320E900F4DB80 /* TextView.swift */; };
+		5A77BFF624A323A600F4DB80 /* Dream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A77BFF524A323A600F4DB80 /* Dream.swift */; };
+		5A77BFF824A323CC00F4DB80 /* DreamPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A77BFF724A323CC00F4DB80 /* DreamPersistence.swift */; };
+		5A77BFFA24A3247700F4DB80 /* NotionDreams.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A77BFF924A3247700F4DB80 /* NotionDreams.json */; };
+		5A77BFFC24A3296900F4DB80 /* DreamOrganizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A77BFFB24A3296900F4DB80 /* DreamOrganizer.swift */; };
+		5A77BFFE24A32C7900F4DB80 /* FollowDreamSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A77BFFD24A32C7900F4DB80 /* FollowDreamSheet.swift */; };
 		5A81C4AD249869C200303B7C /* SprintTaskScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A81C4AC249869C200303B7C /* SprintTaskScheduler.swift */; };
 		5A81C4B024986D1000303B7C /* SprintTracked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A81C4AF24986D1000303B7C /* SprintTracked.swift */; };
 		5A81C4B224986D4900303B7C /* SprintTrackingOrganizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A81C4B124986D4900303B7C /* SprintTrackingOrganizer.swift */; };
@@ -54,6 +65,17 @@
 		5A760F7024937957000AC0BA /* SprintPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintPersistence.swift; sourceTree = "<group>"; };
 		5A760F7224937A7B000AC0BA /* SprintOrganizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintOrganizer.swift; sourceTree = "<group>"; };
 		5A760F7424937ABD000AC0BA /* SprintNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintNotifier.swift; sourceTree = "<group>"; };
+		5A77BFE724A317A000F4DB80 /* Synchronicity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Synchronicity.swift; sourceTree = "<group>"; };
+		5A77BFE924A3181600F4DB80 /* SynchronicityPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronicityPersistence.swift; sourceTree = "<group>"; };
+		5A77BFEB24A3190500F4DB80 /* SynchronicityNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronicityNotifier.swift; sourceTree = "<group>"; };
+		5A77BFED24A319CE00F4DB80 /* SynchronicityOrganizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronicityOrganizer.swift; sourceTree = "<group>"; };
+		5A77BFEF24A31B2F00F4DB80 /* SynchronicityTaskScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronicityTaskScheduler.swift; sourceTree = "<group>"; };
+		5A77BFF324A320E900F4DB80 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		5A77BFF524A323A600F4DB80 /* Dream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dream.swift; sourceTree = "<group>"; };
+		5A77BFF724A323CC00F4DB80 /* DreamPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamPersistence.swift; sourceTree = "<group>"; };
+		5A77BFF924A3247700F4DB80 /* NotionDreams.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NotionDreams.json; sourceTree = "<group>"; };
+		5A77BFFB24A3296900F4DB80 /* DreamOrganizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamOrganizer.swift; sourceTree = "<group>"; };
+		5A77BFFD24A32C7900F4DB80 /* FollowDreamSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowDreamSheet.swift; sourceTree = "<group>"; };
 		5A81C4AC249869C200303B7C /* SprintTaskScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintTaskScheduler.swift; sourceTree = "<group>"; };
 		5A81C4AF24986D1000303B7C /* SprintTracked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintTracked.swift; sourceTree = "<group>"; };
 		5A81C4B124986D4900303B7C /* SprintTrackingOrganizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprintTrackingOrganizer.swift; sourceTree = "<group>"; };
@@ -136,6 +158,37 @@
 			path = Sprint;
 			sourceTree = "<group>";
 		};
+		5A77BFE624A3178E00F4DB80 /* Synchronicity */ = {
+			isa = PBXGroup;
+			children = (
+				5A77BFE724A317A000F4DB80 /* Synchronicity.swift */,
+				5A77BFE924A3181600F4DB80 /* SynchronicityPersistence.swift */,
+				5A77BFEB24A3190500F4DB80 /* SynchronicityNotifier.swift */,
+				5A77BFED24A319CE00F4DB80 /* SynchronicityOrganizer.swift */,
+				5A77BFEF24A31B2F00F4DB80 /* SynchronicityTaskScheduler.swift */,
+			);
+			path = Synchronicity;
+			sourceTree = "<group>";
+		};
+		5A77BFF124A3206600F4DB80 /* Dream */ = {
+			isa = PBXGroup;
+			children = (
+				5A77BFF524A323A600F4DB80 /* Dream.swift */,
+				5A77BFF724A323CC00F4DB80 /* DreamPersistence.swift */,
+				5A77BFFB24A3296900F4DB80 /* DreamOrganizer.swift */,
+				5A77BFF924A3247700F4DB80 /* NotionDreams.json */,
+			);
+			path = Dream;
+			sourceTree = "<group>";
+		};
+		5A77BFF224A320DB00F4DB80 /* UIViewRepresentables */ = {
+			isa = PBXGroup;
+			children = (
+				5A77BFF324A320E900F4DB80 /* TextView.swift */,
+			);
+			path = UIViewRepresentables;
+			sourceTree = "<group>";
+		};
 		5A81C4AE24986D0500303B7C /* Sprint Tracking */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +253,8 @@
 		5A9A7542248FD4D900FDD8D5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5A77BFF124A3206600F4DB80 /* Dream */,
+				5A77BFE624A3178E00F4DB80 /* Synchronicity */,
 				5A81C4D0249B0CCA00303B7C /* ToDo */,
 				5A75BBA6249405D300F2C260 /* Notifications */,
 				5A760F6D249377BD000AC0BA /* Sprint */,
@@ -212,6 +267,7 @@
 		5A9A754D248FE59E00FDD8D5 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				5A77BFF224A320DB00F4DB80 /* UIViewRepresentables */,
 				5AB548432495654B00F230EF /* CustomSliderViewModifier.swift */,
 				5AB548452495656D00F230EF /* CustomSlider.swift */,
 				5A9A7530248FCC5900FDD8D5 /* ContentView.swift */,
@@ -219,6 +275,7 @@
 				5A9A754E248FE5E100FDD8D5 /* FollowList.swift */,
 				5A9A7550248FE7B900FDD8D5 /* FollowAddHabit.swift */,
 				5A760F61249344D1000AC0BA /* FollowUpChecker.swift */,
+				5A77BFFD24A32C7900F4DB80 /* FollowDreamSheet.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -281,6 +338,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A77BFFA24A3247700F4DB80 /* NotionDreams.json in Resources */,
 				5A9A7539248FCC5B00FDD8D5 /* LaunchScreen.storyboard in Resources */,
 				5A9A7536248FCC5B00FDD8D5 /* Preview Assets.xcassets in Resources */,
 				5A9A7533248FCC5B00FDD8D5 /* Assets.xcassets in Resources */,
@@ -295,18 +353,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A81C4B024986D1000303B7C /* SprintTracked.swift in Sources */,
+				5A77BFFE24A32C7900F4DB80 /* FollowDreamSheet.swift in Sources */,
 				5A760F62249344D1000AC0BA /* FollowUpChecker.swift in Sources */,
+				5A77BFF024A31B2F00F4DB80 /* SynchronicityTaskScheduler.swift in Sources */,
 				5A760F68249356BD000AC0BA /* Firework.swift in Sources */,
 				5A9A754C248FE0C400FDD8D5 /* HabitTaskScheduler.swift in Sources */,
+				5A77BFF424A320E900F4DB80 /* TextView.swift in Sources */,
+				5A77BFE824A317A000F4DB80 /* Synchronicity.swift in Sources */,
 				5A9A7551248FE7B900FDD8D5 /* FollowAddHabit.swift in Sources */,
 				5AB548422495652700F230EF /* Double+Convert.swift in Sources */,
 				5A9A752D248FCC5900FDD8D5 /* AppDelegate.swift in Sources */,
 				5A760F7124937957000AC0BA /* SprintPersistence.swift in Sources */,
+				5A77BFF624A323A600F4DB80 /* Dream.swift in Sources */,
 				5A9A7544248FD4E100FDD8D5 /* Habit.swift in Sources */,
 				5A760F7524937ABD000AC0BA /* SprintNotifier.swift in Sources */,
 				5A81C4D2249B0CEC00303B7C /* ToDo.swift in Sources */,
 				5A760F6C24936539000AC0BA /* TrackingOrganizer.swift in Sources */,
 				5A760F6624935652000AC0BA /* Tracked.swift in Sources */,
+				5A77BFFC24A3296900F4DB80 /* DreamOrganizer.swift in Sources */,
+				5A77BFEE24A319CE00F4DB80 /* SynchronicityOrganizer.swift in Sources */,
 				5A81C4AD249869C200303B7C /* SprintTaskScheduler.swift in Sources */,
 				5A81C4B224986D4900303B7C /* SprintTrackingOrganizer.swift in Sources */,
 				5AB548442495654B00F230EF /* CustomSliderViewModifier.swift in Sources */,
@@ -315,8 +380,11 @@
 				5A9A752F248FCC5900FDD8D5 /* SceneDelegate.swift in Sources */,
 				5A9A7548248FD7EB00FDD8D5 /* HabitOrganizer.swift in Sources */,
 				5A9A754F248FE5E100FDD8D5 /* FollowList.swift in Sources */,
+				5A77BFF824A323CC00F4DB80 /* DreamPersistence.swift in Sources */,
+				5A77BFEC24A3190500F4DB80 /* SynchronicityNotifier.swift in Sources */,
 				5A760F6F249377C9000AC0BA /* Sprint.swift in Sources */,
 				5A81C4D6249B0E3800303B7C /* ToDoOrganizer.swift in Sources */,
+				5A77BFEA24A3181600F4DB80 /* SynchronicityPersistence.swift in Sources */,
 				5A9A7531248FCC5900FDD8D5 /* ContentView.swift in Sources */,
 				5A81C4D4249B0D5700303B7C /* ToDoPersistence.swift in Sources */,
 				5A81C4B424986DD500303B7C /* SprintTrackingPersistence.swift in Sources */,

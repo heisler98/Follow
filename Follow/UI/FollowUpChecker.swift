@@ -101,6 +101,10 @@ struct FollowUpChecker: View {
             guard success == true else { return }
             UserDefaults.standard.set(Date(), forKey: kFollowLastSetSprintNotifyDate)
         }
+        SynchronicityTaskScheduler().manuallySchedule { (success) in
+            guard success == true else { return }
+            UserDefaults.standard.set(Date(), forKey: kFollowLastSetSynchronicityNotifyDate)
+        }
     }
     
     private func sliderView(value: Binding<Double>, _ modifiers: CustomSliderComponents) -> some View {

@@ -33,7 +33,7 @@ class SprintPersister {
     func retrieve() throws -> [Sprint] {
         guard FileManager.default.fileExists(atPath: Paths.saveDirectory.path) else {
             dLog("No sprint file at path")
-            throw NSError(domain: "com.eisler.Follow.HabitPersister.SprintDocumentNotFoundAtPath", code: 1, userInfo: nil)
+            throw NSError(domain: "com.eisler.Follow.SprintPersister.SprintDocumentNotFoundAtPath", code: 1, userInfo: nil)
         }
         return try JSONDecoder().decode([Sprint].self, from: try Data(contentsOf: Paths.saveDirectory))
     }

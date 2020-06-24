@@ -12,18 +12,21 @@ struct FollowList: View {
     @ObservedObject var organizer: HabitOrganizer = HabitOrganizer()
     @ObservedObject var sprintOrganizer: SprintOrganizer = SprintOrganizer()
     @ObservedObject var todoOrganizer: ToDoOrganizer = ToDoOrganizer()
-    @State private var newHabitText: String = ""
+    @ObservedObject var synchronicityOrganizer: SynchronicityOrganizer = SynchronicityOrganizer()
+    @ObservedObject var dreamOrganizer: DreamOrganizer = DreamOrganizer()
+    
     @State private var isAddingHabit: Bool = false
     @State private var isPresentingFollowUp: Bool = false
     @State private var didFollowTomorrow = false
-    ///0 = ToDo, 1 = Sprint, 2 = Habit
+    ///0 = ToDo, 1 = Synchronicity, 2 = Dreams, 3 = Sprint, 4 = Habit
     @State private var listSelection: Int = 0
-    @State private var isNewAdditionSprint: Bool = false
-    @State private var newSprint: Sprint?
-    @State private var newToDo: ToDo?
+    @State private var dreamSelected: Dream? = nil
+    
     var scheduler = HabitTaskScheduler()
     var trackOrganizer = TrackingOrganizer()
+    
     @State private var feedbackGenerator: UISelectionFeedbackGenerator! = UISelectionFeedbackGenerator()
+    
     var body: some View {
         ZStack {
             
@@ -41,25 +44,8 @@ struct FollowList: View {
                             .frame(width: 20)
                             .padding()
                     }
-                }.sheet(isPresented: $isAddingHabit, onDismiss: {
-                    if self.isNewAdditionSprint == true {
-                        self.sprintOrganizer.newSprint(self.newSprint!)
-                        self.isNewAdditionSprint = false
-                        self.newSprint = nil
-                        self.newHabitText = ""
-                        return
-                    }
-                    if self.newToDo != nil {
-                        self.todoOrganizer.newToDo(self.newToDo!)
-                        self.newHabitText = ""
-                    }
-                    if self.newHabitText != "" {
-                        self.organizer.newHabit(Habit(name: self.newHabitText))
-                        self.newHabitText = ""
-                    }
-                    
-                }) {
-                    FollowAddHabit(isSprint: self.$isNewAdditionSprint, sprint: self.$newSprint, todo: self.$newToDo, text: self.$newHabitText, isPresented: self.$isAddingHabit)
+                }.sheet(isPresented: $isAddingHabit) {
+                    FollowAddHabit(habitOrganizer: self.organizer, sprintOrganizer: self.sprintOrganizer, todoOrganizer: self.todoOrganizer, synchronicityOrganizer: self.synchronicityOrganizer, dreamOrganizer: self.dreamOrganizer,isPresented: self.$isAddingHabit)
                 }
                 if organizer.lastSaveSucceeded == false {
                     HStack {
@@ -76,16 +62,18 @@ struct FollowList: View {
                 }
                 Picker(selection: $listSelection, label: Text("")) {
                     Text("To-do").tag(0)
-                    Text("Sprints").tag(1)
-                    Text("Habits").tag(2)
+                    Text("ψ").tag(1)
+                    Text("Dreams").tag(2)
+                    Text("Sprints").tag(3)
+                    Text("Habits").tag(4)
                 }.pickerStyle(SegmentedPickerStyle())
-                
+                    
                     .padding(.horizontal)
                     .sheet(isPresented: $isPresentingFollowUp, onDismiss: {
-//                        self.scheduler.manuallySchedule { (success) in
-//                            guard success == true else { return }
-//                            UserDefaults.standard.set(Date(), forKey: kFollowLastSetNotifyDate)
-//                        }
+                        //                        self.scheduler.manuallySchedule { (success) in
+                        //                            guard success == true else { return }
+                        //                            UserDefaults.standard.set(Date(), forKey: kFollowLastSetNotifyDate)
+                        //                        }
                         self.didFollowTomorrow.toggle()
                     }) {
                         FollowUpChecker(isPresented: self.$isPresentingFollowUp, habits: self.organizer.habits, sprints: self.sprintOrganizer.sprints)
@@ -94,19 +82,44 @@ struct FollowList: View {
                     List {
                         ForEach(todoOrganizer.todos, id: \.self) { todo in
                             Text(todo.name)
-                            .bold()
+                                .bold()
                         }.onDelete(perform: self.removeToDos(at:))
+                    }
+                }
+                if listSelection == 1 {
+                    List {
+                        ForEach(synchronicityOrganizer.synchronicities, id: \.self) { synchronicity in
+                            Text(synchronicity.name)
+                                .bold()
+                        }.onDelete(perform: self.synchronicityOrganizer.removeSynchronicities)
+                        
                     }
                 }
                 if listSelection == 2 {
                     List {
+                        ForEach(dreamOrganizer.dreams, id: \.self) { dream in
+                            Text(dream.title)
+                                .bold()
+                                .onTapGesture {
+                                    self.dreamSelected = dream
+                            }
+                        }.onDelete(perform: self.dreamOrganizer.removeDreams)
+                            .sheet(item: self.$dreamSelected, onDismiss: {
+                                self.dreamSelected = nil
+                            }) { (dreamSelected) in
+                                FollowDreamSheet(dream: self.dreamSelected!)
+                        }
+                    }
+                }
+                if listSelection == 4 {
+                    List {
                         ForEach(organizer.habits, id: \.self) { habit in
                             Text(habit.name)
-                            .bold()
+                                .bold()
                         }.onDelete(perform: self.organizer.removeHabits)
                     }
                 }
-                if listSelection == 1 {
+                if listSelection == 3 {
                     List {
                         ForEach(sprintOrganizer.sprints, id: \.self) { sprint in
                             HStack {
@@ -138,19 +151,13 @@ struct FollowList: View {
                     }
                 }
             }.onTapGesture(count: 2) {
-                switch self.listSelection {
-                case 0:
-                    self.listSelection = 1
-                    break
-                case 1:
-                    self.listSelection = 2
-                    break
-                case 2:
+                if self.listSelection == 4 {
                     self.listSelection = 0
-                default:()
+                } else {
+                    self.listSelection += 1
                 }
             }        }.onReceive([self.listSelection].publisher.first()) { _ in
-            self.feedbackGenerator.selectionChanged()
+                self.feedbackGenerator.selectionChanged()
         }.onAppear {
             self.feedbackGenerator.prepare()
         }.onDisappear {
