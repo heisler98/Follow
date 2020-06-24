@@ -98,9 +98,12 @@ struct FollowList: View {
                 if listSelection == 2 {
                     List {
                         ForEach(dreamOrganizer.dreams, id: \.self) { dream in
-                            Text(dream.title)
+                            HStack {
+                                Text(dream.title)
                                 .bold()
-                                .onTapGesture {
+                                Rectangle()
+                                    .fill(Color(UIColor.systemBackground))
+                            }.onTapGesture {
                                     self.dreamSelected = dream
                             }
                         }.onDelete(perform: self.dreamOrganizer.removeDreams)
